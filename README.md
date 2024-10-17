@@ -39,7 +39,7 @@ A REST api written in Django
         http://localhost:8000/api/
     ```
     
-    #### Users Endpoints
+    ### Users Endpoints
 
 1. **User Registration**:
    - POST /api/register/
@@ -51,7 +51,7 @@ A REST api written in Django
      - Request: { "username": "Robert", "password": "1235"  }
      - Response: { "message": "User Logged-in", "token": "srg45s4dv68d4fs8d64c" }
     
-     #### Clients Endpoints
+    ### Clients Endpoints
 
 *. **List of all Clients**:
    - GET /api/clients/
