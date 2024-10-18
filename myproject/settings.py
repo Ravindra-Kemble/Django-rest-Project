@@ -55,19 +55,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-from datetime import timedelta
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),  # Time before access token expires
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     # Time before refresh token expires
-    'ROTATE_REFRESH_TOKENS': True,                    # Whether to rotate refresh tokens
-    'BLACKLIST_AFTER_ROTATION': True,                  # Whether to blacklist old refresh tokens after rotation
-    'ALGORITHM': 'HS256',                             # Algorithm to use for signing the tokens
-    'SIGNING_KEY': SECRET_KEY,                        # Use your Django secret key
-    'AUTH_HEADER_TYPES': ('Bearer',),                 # Authorization header types
-    'USER_ID_FIELD': 'id',                            # Field to use as the user ID
-    'USER_ID_CLAIM': 'user_id',                       # Claim to use for the user ID
-    # Add other optional settings as needed
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -106,9 +93,9 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'client_db',  # Your database name
-        'USER': 'postgres',         # Your PostgreSQL username
-        'PASSWORD': 'Aravi8898',     # Your PostgreSQL password
+        'NAME': 'db_name',  # Your database name
+        'USER': 'username',         # Your PostgreSQL username
+        'PASSWORD': 'password',     # Your PostgreSQL password
         'HOST': 'localhost',            # Set to 'localhost' or the IP address of your PostgreSQL server
         'PORT': '5432',                 # Default PostgreSQL port
     }
